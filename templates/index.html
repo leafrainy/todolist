@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>{{config.title}}</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="{{url_for('static', filename='css/weui.min.css')}}">
+	<link rel="stylesheet" href="{{url_for('static', filename='css/jquery-weui.css')}}">
+</head>
+<body>
+{% include "header.html" %}
+{% include "content.html" %}
+{% include "footer.html" %}
+
+</body>
+</html>

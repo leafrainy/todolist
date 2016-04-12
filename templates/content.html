@@ -1,0 +1,45 @@
+﻿	<!--body start-->
+	<div class="weui_tab">
+	  <div class="weui_tab_bd">
+	    <div id="tab1" class="weui_tab_bd_item weui_tab_bd_item_active">
+	      	{% for data in todo_list_data %}
+	      	<div class="weui_cells weui_cells_form" id="thing_{{data.id}}">
+		      <div class="weui_cell weui_cell_switch">
+		        <div class="weui_cell_hd weui_cell_primary">{{data.thing}}</div>
+		        <div class="weui_cell_hd weui_cell_primary">{{data.addtime}}</div>
+		        <div class="weui_cell_ft">
+		          <input class="weui_switch" type="checkbox" onclick="change({{data.id}},{{data.status}})">
+		        </div>
+		      </div>
+	    	</div>
+	    	{% endfor %}
+	    </div>
+	    <div id="tab2" class="weui_tab_bd_item">
+	     	{% for data in todo_ok_data %}
+	      	<div class="weui_cells weui_cells_form">
+		      <div class="weui_cell weui_cell_switch">
+		        <div class="weui_cell_hd weui_cell_primary">{{data.thing}}</div>
+		        <div class="weui_cell_hd weui_cell_primary">{{data.changetime}}</div>
+		        <div class="weui_cell_ft">
+		        	<a class="weui_btn weui_btn_primary">已完成</a>  
+		        </div>
+		      </div>
+	    	</div>
+	    	{% endfor %}
+	    </div>
+	    <div id="tab3" class="weui_tab_bd_item">
+	        <div class="weui_cells weui_cells_form">
+			      <div class="weui_cell">
+			        <div class="weui_cell_bd weui_cell_primary">
+			          <textarea class="weui_textarea" id="thing" placeholder="请输入事件" rows="3"></textarea>
+			          <div class="weui_textarea_counter"></div>
+			        </div>
+			      </div>
+			</div>
+			<a href="javascript:;" class="weui_btn weui_btn_primary" onclick="add()">提交</a>
+	    </div>
+	    <div id="tab4" class="weui_tab_bd_item">
+	      <h1 class="doc-head">关于我</h1>
+	    </div>
+	  </div>
+	  <!--body end-->
